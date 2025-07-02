@@ -1593,6 +1593,29 @@ def handle_file_upload_errors(uploaded_file, agent):
 
 # Add to the main function before the existing tabs
 def add_sidebar_features():
+    # Footer copyright in the left sidebar bottom
+    st.markdown(
+        """
+        <style>
+        .alamin-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 18rem;
+            padding: 0.5em 0;
+            color: gray;
+            background: transparent;
+            text-align: left;
+            font-size: 0.9em;
+            z-index: 9999;
+        }
+        </style>
+        <div class='alamin-footer'>
+            © 2025 Al Amin. Made with coffee and code ☕
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     """Add additional features to the sidebar"""
     st.sidebar.header("📊 Quick Stats")
     
